@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-envify/envify/custom.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-envify/node_modules/envify/custom.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-envify">npmtest-envify (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-envify/envify/custom.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-envify/node_modules/envify/custom.js</span></h1>
     <h2>
         
         Statements: <span class="metric">18.37% <small>(9 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-envify/envify/</a> &#187; custom.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-envify/node_modules/envify/</a> » custom.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -404,28 +402,28 @@
 var processEnvPattern = /\bprocess\.env\b/
 &nbsp;
 module.exports = function(rootEnv) {
-  rootEnv = rootEnv || <span class="branch-1 cbranch-no" title="branch not covered" >process.env </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >{}</span>
+  rootEnv = rootEnv || <span class="branch-1 cbranch-no" title="branch not covered">process.env </span>|| <span class="branch-2 cbranch-no" title="branch not covered">{}</span>
 &nbsp;
-  return <span class="fstat-no" title="function not covered" >function envify(file, argv) {</span>
-<span class="cstat-no" title="statement not covered" >    if (/\.json$/.test(file)) <span class="cstat-no" title="statement not covered" >return through()</span></span>
+  return <span class="fstat-no" title="function not covered">function envify(file, argv) {</span>
+<span class="cstat-no" title="statement not covered">    if (/\.json$/.test(file)) <span class="cstat-no" title="statement not covered">return through()</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var Syntax = esprima.Syntax</span>
-<span class="cstat-no" title="statement not covered" >    var buffer = []</span>
-<span class="cstat-no" title="statement not covered" >    argv = argv || {}</span>
+<span class="cstat-no" title="statement not covered">    var Syntax = esprima.Syntax</span>
+<span class="cstat-no" title="statement not covered">    var buffer = []</span>
+<span class="cstat-no" title="statement not covered">    argv = argv || {}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return through(write, flush)</span>
+<span class="cstat-no" title="statement not covered">    return through(write, flush)</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function write(data) {</span>
-<span class="cstat-no" title="statement not covered" >      buffer.push(data)</span>
+<span class="fstat-no" title="function not covered">    function write(data) {</span>
+<span class="cstat-no" title="statement not covered">      buffer.push(data)</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function transform(source, envs) {</span>
-<span class="cstat-no" title="statement not covered" >      var args  = [].concat(envs[0]._ || []).concat(envs[1]._ || [])</span>
-<span class="cstat-no" title="statement not covered" >      var purge = args.indexOf('purge') !== -1</span>
-<span class="cstat-no" title="statement not covered" >      var replacements = []</span>
+<span class="fstat-no" title="function not covered">    function transform(source, envs) {</span>
+<span class="cstat-no" title="statement not covered">      var args  = [].concat(envs[0]._ || []).concat(envs[1]._ || [])</span>
+<span class="cstat-no" title="statement not covered">      var purge = args.indexOf('purge') !== -1</span>
+<span class="cstat-no" title="statement not covered">      var replacements = []</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >      function match(node) {</span>
-<span class="cstat-no" title="statement not covered" >        return (</span>
+<span class="fstat-no" title="function not covered">      function match(node) {</span>
+<span class="cstat-no" title="statement not covered">        return (</span>
           node.type === Syntax.MemberExpression
           &amp;&amp; node.object.type === Syntax.MemberExpression
           &amp;&amp; node.object.computed === false
@@ -437,64 +435,65 @@ module.exports = function(rootEnv) {
         )
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      esprima.parse(source, { tolerant: true }, <span class="fstat-no" title="function not covered" >function(node, meta) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (match(node)) {</span>
-<span class="cstat-no" title="statement not covered" >          var key = node.property.name || node.property.value</span>
-<span class="cstat-no" title="statement not covered" >          for (var i = 0; i &lt; envs.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var value = envs[i][key]</span>
-<span class="cstat-no" title="statement not covered" >            if (value !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >              replacements.push({ node: node, meta: meta, value: JSON.stringify(value) })</span>
-<span class="cstat-no" title="statement not covered" >              return</span>
+<span class="cstat-no" title="statement not covered">      esprima.parse(source, { tolerant: true }, <span class="fstat-no" title="function not covered">function(node, meta) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (match(node)) {</span>
+<span class="cstat-no" title="statement not covered">          var key = node.property.name || node.property.value</span>
+<span class="cstat-no" title="statement not covered">          for (var i = 0; i &lt; envs.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var value = envs[i][key]</span>
+<span class="cstat-no" title="statement not covered">            if (value !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">              replacements.push({ node: node, meta: meta, value: JSON.stringify(value) })</span>
+<span class="cstat-no" title="statement not covered">              return</span>
             }
           }
-<span class="cstat-no" title="statement not covered" >          if (purge) {</span>
-<span class="cstat-no" title="statement not covered" >            replacements.push({ node: node, meta: meta, value: undefined })</span>
+<span class="cstat-no" title="statement not covered">          if (purge) {</span>
+<span class="cstat-no" title="statement not covered">            replacements.push({ node: node, meta: meta, value: undefined })</span>
           }
-        } else <span class="cstat-no" title="statement not covered" >if (node.type === Syntax.AssignmentExpression) {</span>
-<span class="cstat-no" title="statement not covered" >          for (var i = 0; i &lt; replacements.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >            if (replacements[i].node === node.left) {</span>
-<span class="cstat-no" title="statement not covered" >              replacements.splice(i, 1)</span>
+        } else <span class="cstat-no" title="statement not covered">if (node.type === Syntax.AssignmentExpression) {</span>
+<span class="cstat-no" title="statement not covered">          for (var i = 0; i &lt; replacements.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">            if (replacements[i].node === node.left) {</span>
+<span class="cstat-no" title="statement not covered">              replacements.splice(i, 1)</span>
             }
           }
         }
       })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var result = source</span>
-<span class="cstat-no" title="statement not covered" >      if (replacements.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >        replacements.sort(<span class="fstat-no" title="function not covered" >function (a, b) {</span></span>
-<span class="cstat-no" title="statement not covered" >          return b.meta.start.offset - a.meta.start.offset</span>
+<span class="cstat-no" title="statement not covered">      var result = source</span>
+<span class="cstat-no" title="statement not covered">      if (replacements.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">        replacements.sort(<span class="fstat-no" title="function not covered">function (a, b) {</span></span>
+<span class="cstat-no" title="statement not covered">          return b.meta.start.offset - a.meta.start.offset</span>
         })
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; replacements.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >          var r = replacements[i]</span>
-<span class="cstat-no" title="statement not covered" >          result = result.slice(0, r.meta.start.offset) + r.value + result.slice(r.meta.end.offset)</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; replacements.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">          var r = replacements[i]</span>
+<span class="cstat-no" title="statement not covered">          result = result.slice(0, r.meta.start.offset) + r.value + result.slice(r.meta.end.offset)</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return result</span>
+<span class="cstat-no" title="statement not covered">      return result</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function flush() {</span>
-<span class="cstat-no" title="statement not covered" >      var source = buffer.join('')</span>
+<span class="fstat-no" title="function not covered">    function flush() {</span>
+<span class="cstat-no" title="statement not covered">      var source = buffer.join('')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (processEnvPattern.test(source)) {</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >          source = transform(source, [argv, rootEnv])</span>
+<span class="cstat-no" title="statement not covered">      if (processEnvPattern.test(source)) {</span>
+<span class="cstat-no" title="statement not covered">        try {</span>
+<span class="cstat-no" title="statement not covered">          source = transform(source, [argv, rootEnv])</span>
         } catch(err) {
-<span class="cstat-no" title="statement not covered" >          return this.emit('error', err)</span>
+<span class="cstat-no" title="statement not covered">          return this.emit('error', err)</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.queue(source)</span>
-<span class="cstat-no" title="statement not covered" >      this.queue(null)</span>
+<span class="cstat-no" title="statement not covered">      this.queue(source)</span>
+<span class="cstat-no" title="statement not covered">      this.queue(null)</span>
     }
   }
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 17:36:46 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 21:41:06 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
