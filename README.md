@@ -1,7 +1,10 @@
-# test coverage for  [envify (v4.0.0)](https://github.com/hughsk/envify#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-envify.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-envify) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-envify.svg)](https://travis-ci.org/npmtest/node-npmtest-envify)
+# npmtest-envify
+
+#### test coverage for  [envify (v4.0.0)](https://github.com/hughsk/envify#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-envify.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-envify) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-envify.svg)](https://travis-ci.org/npmtest/node-npmtest-envify)
+
 #### Selectively replace Node-style environment variables with plain strings.
 
-[![NPM](https://nodei.co/npm/envify.png?downloads=true)](https://www.npmjs.com/package/envify)
+[![NPM](https://nodei.co/npm/envify.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/envify)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-envify/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-envify/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-envify/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-envify/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-envify/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-envify/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-envify/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-envify/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-envify/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-envify/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-envify%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-envify/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-envify/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-envify/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-envify/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-envify%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-envify/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-envify/build/test-report.html](https://npmtest.github.io/node-npmtest-envify/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-envify/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-envify/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-envify/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-envify/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-envify/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-envify/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-envify/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Hugh Kennedy",
-        "email": "hughskennedy@gmail.com",
         "url": "http://hughskennedy.com/"
     },
     "bin": {
@@ -66,21 +74,17 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "hughsk",
-            "email": "hughskennedy@gmail.com"
+            "name": "hughsk"
         },
         {
-            "name": "yoshuawuyts",
-            "email": "i@yoshuawuyts.com"
+            "name": "yoshuawuyts"
         },
         {
-            "name": "zertosh",
-            "email": "zertosh@gmail.com"
+            "name": "zertosh"
         }
     ],
     "name": "envify",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/hughsk/envify.git"
